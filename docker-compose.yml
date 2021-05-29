@@ -1,0 +1,11 @@
+web:
+  image: 'gitlab/gitlab-ce:12.0.2-ce.0'
+  hostname: '115.28.82.133'
+  ports:
+    - '9999:9999'
+    - '4443:443'
+    - '2222:22'
+  volumes:
+    - './config:/etc/gitlab'
+    - './logs:/var/log/gitlab'
+    - './data:/var/opt/gitlab'
